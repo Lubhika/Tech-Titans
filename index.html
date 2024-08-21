@@ -1,0 +1,51 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- College and Department Names -->
+        <h2 class="college-name">VELAMMAL ENGINEERING COLLEGE</h2>
+        <h3 class="dept-name">DEPARTMENT OF CYBERSECURITY</h3>
+
+        <h1>CGPA Calculator</h1>
+        <form id="cgpa-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-no">Registration Number:</label>
+                <input type="text" id="reg-no" required>
+            </div>
+            <div class="form-group">
+                <label for="dept">Department:</label>
+                <input type="text" id="dept" required>
+            </div>
+            <div class="form-group">
+                <label for="num-semesters">Number of Semesters:</label>
+                <select id="num-semesters" required>
+                    <option value="" selected disabled>Select Number</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div id="semesters-container"></div>
+            <button class="btn" type="submit">Calculate</button>
+        </form>
+        <div id="gpas"></div>
+        <div id="cgpa"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
