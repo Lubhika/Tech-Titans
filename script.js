@@ -37,7 +37,7 @@ document.getElementById('cgpa-form').addEventListener('submit', function(event) 
         });
 
         if (isSemesterValid) {
-            const gpa = (semesterCredits > 0) ? (semesterGradePoints / semesterCredits).toFixed(4) : 0;
+            const gpa = (semesterCredits > 0) ? (semesterGradePoints / semesterCredits).toFixed(2) : 0;
             document.getElementById('gpas').innerHTML += `<h2>Semester ${sem} GPA: ${gpa}</h2>`;
             totalCredits += semesterCredits;
             totalGradePoints += semesterGradePoints;
@@ -48,7 +48,7 @@ document.getElementById('cgpa-form').addEventListener('submit', function(event) 
     }
 
     // Check for 'U' grade and set CGPA accordingly
-    const cgpa = hasUGrade ? 0 : (totalCredits > 0) ? (totalGradePoints / totalCredits).toFixed(4) : 0;
+    const cgpa = hasUGrade ? 0 : (totalCredits > 0) ? (totalGradePoints / totalCredits).toFixed(2) : 0;
     if (allSemestersValid) {
         document.getElementById('cgpa').innerHTML = `<h2>${name} (${regNo}) - ${dept} - Overall CGPA: ${cgpa}</h2>`;
     }
@@ -177,3 +177,4 @@ function getSubjectsForSemester(semester) {
 
     return subjectsBySemester[semester];
 }
+
